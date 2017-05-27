@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<ion-list>
+  <ion-item-sliding *ngFor="let person of people" >
+    <ion-item>
+     <ion-avatar item-left>
+      <img src="{{person.picture.thumbnail}}">
+      </ion-avatar>
+      <h2>{{person.name.first}} {{person.name.last}}</h2>
+      <p>{{person.email}}</p>
+    </ion-item>
+    <ion-item-options>
+      <button ion-button (click)="share(person.login.username)">Share</button>
+    </ion-item-options>
+
+  </ion-item-sliding>
+</ion-list>
+</ion-content>
