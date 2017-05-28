@@ -15,9 +15,9 @@
       <p>{{person.email}}</p>
     </ion-item>
     <ion-item-options>
-      <button ion-button (click)="share(person.login.username)">Share</button>
+      <button ion-button color="warning" (click)="share(person.login.username)"><ion-icon name="construct"></ion-icon> Edit</button>
+      <button ion-button color="danger" (click)="removeItem(person)"><ion-icon name="trash"></ion-icon> Delete</button>
     </ion-item-options>
-
   </ion-item-sliding>
 </ion-list>
 </ion-content>
